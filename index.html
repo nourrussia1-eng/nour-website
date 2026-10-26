@@ -1,38 +1,83 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nour Russia - Rahom Forever</title>
+<title>Nour Russia ❤️ Rahom</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial;background:linear-gradient(135deg,#667eea,#764ba2,#f093fb,#f5576c);background-size:400% 400%;animation:g 8s ease infinite;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px}
-@keyframes g{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-.card{background:white;width:100%;max-width:400px;border-radius:25px;padding:30px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
-.avatar{width:110px;height:110px;border-radius:50%;background:linear-gradient(45deg,#ff6a00,#ee0979);display:flex;justify-content:center;align-items:center;color:white;font-size:45px;font-weight:bold;margin:0 auto}
-h1{font-size:30px;margin:15px 0 5px}
-.bio{color:#666;font-size:14px;margin-bottom:15px}
-.forever{background:linear-gradient(45deg,#ff6a00,#ee0979,#ff6a00);background-size:200% 200%;animation:glow 2s infinite;color:white;padding:12px 20px;border-radius:50px;font-weight:bold;font-size:18px;margin:15px 0;box-shadow:0 5px 20px rgba(238,9,121,0.4)}
-@keyframes glow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-.btn{display:block;padding:14px;margin-bottom:12px;border-radius:12px;color:white;text-decoration:none;font-weight:bold;font-size:16px;transition:0.3s}
-.btn:active{transform:scale(0.97)}
-.fb{background:#1877F2}.tiktok{background:#000}.insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
-.love{margin-top:20px;color:#ee0979;font-weight:bold;font-size:22px;animation:pulse 1.5s infinite}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
-.date{margin-top:8px;color:#764ba2;font-weight:bold}
+body{
+  min-height:100vh;
+  display:flex;justify-content:center;align-items:center;
+  background: radial-gradient(circle at top, #ff5e78, #6a11cb 70%, #000);
+  font-family:'Cairo', sans-serif;
+  padding:20px;
+}
+.card{
+  background: rgba(255,255,255,0.95);
+  width:100%;max-width:360px;
+  border-radius:30px;
+  padding:35px 25px;
+  text-align:center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.avatar{
+  width:90px;height:90px;
+  background: linear-gradient(135deg,#ff4d6d,#6a11cb);
+  border-radius:50%;
+  margin:0 auto 15px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:40px;color:white;
+  box-shadow:0 10px 20px rgba(255,77,109,0.4);
+}
+h1{color:#222;font-size:28px;margin-bottom:5px}
+.badge{
+  background: linear-gradient(90deg,#ff4d6d,#6a11cb);
+  color:white;padding:8px 16px;border-radius:20px;
+  display:inline-block;font-size:14px;margin:12px 0;
+  box-shadow:0 5px 15px rgba(106,17,203,0.3);
+}
+.date{font-size:18px;color:#6a11cb;font-weight:800;margin:15px 0}
+.love{font-size:22px;color:#ff006e;font-weight:800;animation:pulse 1.2s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+.divider{height:1px;background:#eee;margin:20px 0}
+.social{display:grid;gap:12px}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px;border-radius:15px;
+  text-decoration:none;color:white;font-weight:700;
+  font-size:16px;transition:0.3s;
+}
+.btn:hover{transform:scale(1.05)}
+.whatsapp{background:#25D366}
+.facebook{background:#1877F2}
+.tiktok{background:#000}
+.insta{background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
+.footer{margin-top:20px;font-size:12px;color:#999}
 </style>
 </head>
 <body>
 <div class="card">
-<div class="avatar">N</div>
-<h1>Nour Russia</h1>
-<p class="bio">مبرمج من صفت اللبن - الجيزة</p>
-<div class="forever">🧿 April 12 4:56 Forever 🫶🏻</div>
-<a class="btn fb" href="https://www.facebook.com/share/1F4ZbHoJ3t/" target="_blank">Facebook</a>
-<a class="btn tiktok" href="https://www.tiktok.com/@nourrussia1?_t=ZS-90zE1jLqjQw&_r=1" target="_blank">TikTok</a>
-<a class="btn insta" href="https://www.instagram.com/nour_russia1?igsh=c2p5aGgzY3NreW1q" target="_blank">Instagram</a>
-<div class="love">I love rahom ❤️</div>
-<div class="date">Forever Together 💍</div>
+  <div class="avatar">N</div>
+  <h1>Nour Russia 💖</h1>
+  <div class="badge">🧿 April 12 4:56 Forever 🫶🏻</div>
+  <h2 style="font-size:16px;color:#555">Welcome to My Official World</h2>
+  <div class="date">I love rahom ❤️</div>
+  
+  <div class="divider"></div>
+  
+  <div class="social">
+    <a class="btn whatsapp" href="https://wa.me/201234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a class="btn facebook" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a class="btn tiktok" href="https://tiktok.com/@" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a class="btn insta" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+  
+  <div class="footer">© 2026 Nour - All Rights Reserved<br>Website is Live Now ✨</div>
 </div>
 </body>
 </html>
