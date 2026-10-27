@@ -1,83 +1,136 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nour Russia ❤️ Rahom</title>
+<title>Nour Russia</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@800&family=Orbitron:wght@800&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  min-height:100vh;
+  min-height:100vh;background:#000;
   display:flex;justify-content:center;align-items:center;
-  background: radial-gradient(circle at top, #ff5e78, #6a11cb 70%, #000);
-  font-family:'Cairo', sans-serif;
-  padding:20px;
+  flex-direction:column;gap:20px;
+  font-family:'Cairo',sans-serif;padding:30px 15px;
 }
 .card{
-  background: rgba(255,255,255,0.95);
-  width:100%;max-width:360px;
-  border-radius:30px;
-  padding:35px 25px;
+  width:90%;max-width:360px;
+  background:rgba(15,15,15,0.9);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:24px;padding:35px 25px;
   text-align:center;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-  animation: float 3s ease-in-out infinite;
+  box-shadow:0 0 40px rgba(106,17,203,0.2);
 }
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.avatar{
-  width:90px;height:90px;
-  background: linear-gradient(135deg,#ff4d6d,#6a11cb);
-  border-radius:50%;
-  margin:0 auto 15px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:40px;color:white;
-  box-shadow:0 10px 20px rgba(255,77,109,0.4);
+.glow-text{
+  font-family:'Orbitron',sans-serif;
+  font-size:36px;font-weight:800;
+  background: linear-gradient(90deg,#ff00cc,#00ffcc,#00ccff,#ffcc00,#ff00cc);
+  background-size:400% 400%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  animation: colorMove 3s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255,0,204,0.5));
 }
-h1{color:#222;font-size:28px;margin-bottom:5px}
-.badge{
-  background: linear-gradient(90deg,#ff4d6d,#6a11cb);
-  color:white;padding:8px 16px;border-radius:20px;
-  display:inline-block;font-size:14px;margin:12px 0;
-  box-shadow:0 5px 15px rgba(106,17,203,0.3);
+@keyframes colorMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
-.date{font-size:18px;color:#6a11cb;font-weight:800;margin:15px 0}
-.love{font-size:22px;color:#ff006e;font-weight:800;animation:pulse 1.2s infinite}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
-.divider{height:1px;background:#eee;margin:20px 0}
-.social{display:grid;gap:12px}
-.btn{
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  padding:14px;border-radius:15px;
-  text-decoration:none;color:white;font-weight:700;
-  font-size:16px;transition:0.3s;
+.sub{color:#aaa;font-size:14px;margin:12px 0;letter-spacing:2px}
+.date{color:#fff;font-size:13px;margin:15px 0;background:rgba(255,255,255,0.05);padding:8px 14px;border-radius:20px;display:inline-block;border:1px solid rgba(255,255,255,0.1)}
+.love{font-size:22px;font-weight:800;margin:20px 0;background:linear-gradient(90deg,#ff4d6d,#ff00cc,#00ffcc);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation: colorMove 2s linear infinite}
+.social{display:grid;gap:12px;margin-top:25px}
+.btn{padding:14px;border-radius:12px;text-decoration:none;color:white;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:600;transition:0.3s}
+.btn:hover{background:rgba(255,255,255,0.1);transform:translateY(-2px)}
+
+/* المربع الجديد - بالونة الدهب والتلج */
+.million-balloon{
+  width:90%;max-width:360px;
+  background: radial-gradient(circle at 30% 30%, #FFF9C4, #FFD700, #FFA500, #B8860B);
+  border-radius:50px;
+  padding:30px 20px;
+  text-align:center;
+  position:relative;
+  box-shadow: 
+    0 0 20px rgba(255,215,0,0.8),
+    0 0 40px rgba(0,255,255,0.6),
+    0 0 60px rgba(125,249,255,0.4),
+    inset 0 0 20px rgba(255,255,255,0.8);
+  border:2px solid rgba(0,255,255,0.5);
+  animation: balloonFloat 3s ease-in-out infinite, goldGlow 2s ease-in-out infinite alternate;
 }
-.btn:hover{transform:scale(1.05)}
-.whatsapp{background:#25D366}
-.facebook{background:#1877F2}
-.tiktok{background:#000}
-.insta{background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
-.footer{margin-top:20px;font-size:12px;color:#999}
+.million-balloon::before{
+  content:'';
+  position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;
+  background: linear-gradient(45deg, #FFD700, #00FFFF, #7DF9FF, #FFD700);
+  background-size:300% 300%;
+  border-radius:50px;
+  z-index:-1;
+  animation: borderMove 3s linear infinite;
+  filter: blur(8px);
+}
+@keyframes balloonFloat{
+  0%,100%{transform:translateY(0px)}
+  50%{transform:translateY(-10px)}
+}
+@keyframes goldGlow{
+  0%{box-shadow: 0 0 20px rgba(255,215,0,0.8), 0 0 40px rgba(0,255,255,0.6), 0 0 60px rgba(125,249,255,0.4)}
+  100%{box-shadow: 0 0 30px rgba(255,215,0,1), 0 0 60px rgba(0,255,255,0.8), 0 0 90px rgba(125,249,255,0.6)}
+}
+@keyframes borderMove{
+  0%{background-position:0% 50%}
+  100%{background-position:300% 50%}
+}
+.million-text{
+  font-size:22px;font-weight:800;
+  color:#000;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 2px 0 #fff;
+  line-height:1.4;
+}
+.million-sub{
+  font-size:13px;color:#003366;
+  margin-top:8px;font-weight:600;
+  text-shadow:0 0 5px rgba(0,255,255,0.8);
+  letter-spacing:1px;
+}
+.ice-sparkle{
+  position:absolute;
+  font-size:18px;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+@keyframes sparkle{
+  0%,100%{opacity:0.3;transform:scale(0.8)}
+  50%{opacity:1;transform:scale(1.2)}
+}
+.footer{margin-top:10px;font-size:10px;color:#555;letter-spacing:1px}
 </style>
 </head>
 <body>
+
 <div class="card">
-  <div class="avatar">N</div>
-  <h1>Nour Russia 💖</h1>
-  <div class="badge">🧿 April 12 4:56 Forever 🫶🏻</div>
-  <h2 style="font-size:16px;color:#555">Welcome to My Official World</h2>
-  <div class="date">I love rahom ❤️</div>
-  
-  <div class="divider"></div>
-  
+  <div class="glow-text">Nour Russia</div>
+  <div class="sub">SYSTEM ONLINE</div>
+  <div class="date">🧿 April 12 4:56 Forever 🫶🏻</div>
+  <div style="color:#ccc;font-size:14px;margin-top:10px">Welcome to My World</div>
+  <div class="love">I love rahom ❤️</div>
   <div class="social">
-    <a class="btn whatsapp" href="https://wa.me/201234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    <a class="btn facebook" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a class="btn tiktok" href="https://tiktok.com/@" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-    <a class="btn insta" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a class="btn" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a class="btn" href="https://tiktok.com/@" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a class="btn" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
   </div>
-  
-  <div class="footer">© 2026 Nour - All Rights Reserved<br>Website is Live Now ✨</div>
+  <div class="footer">© 2026 NOUR RUSSIA // ALL RIGHTS RESERVED</div>
 </div>
+
+<!-- البالونة الجديدة الدهب التلج -->
+<div class="million-balloon">
+  <span class="ice-sparkle" style="top:10px;left:15px;">❄️</span>
+  <span class="ice-sparkle" style="top:15px;right:20px;animation-delay:0.5s">✨</span>
+  <span class="ice-sparkle" style="bottom:10px;left:25px;animation-delay:1s">💎</span>
+  <span class="ice-sparkle" style="bottom:15px;right:15px;animation-delay:0.3s">❄️</span>
+  
+  <div class="million-text">قريباً<br>حلم المليون سيتحقق</div>
+  <div class="million-sub">💰 GOLD X ICE NEON 💰<br>SOON...</div>
+</div>
+
 </body>
 </html>
